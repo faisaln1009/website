@@ -13,8 +13,9 @@ export default function GalleryPreview(){
             <div className="eyebrow">A Glimpse Inside</div>
             <h2 className="mt-4 font-display text-4xl md:text-5xl text-cream">Gallery</h2>
           </div>
-          <Link href="/gallery" className="text-sm tracking-wide text-cream transition-colors hover:text-gold">
-            View All →
+          <Link href="/gallery" className="group inline-flex items-center gap-2 text-sm tracking-wide text-cream transition-colors hover:text-gold">
+            View All
+            <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
           </Link>
         </div>
       </Reveal>

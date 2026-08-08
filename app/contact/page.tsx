@@ -1,8 +1,22 @@
-import React from 'react'
+"use client"
+import React, { useState } from 'react'
 import Reveal from '../../components/Reveal'
-import { Phone, Mail, MapPin, Clock } from 'lucide-react'
+import { Phone, Mail, MapPin, Clock, ArrowRight, Check, Loader2 } from 'lucide-react'
 
 export default function ContactPage(){
+  const [form, setForm] = useState({ name: '', email: '', message: '' })
+  const [sent, setSent] = useState(false)
+  const [sending, setSending] = useState(false)
+
+  const submit = (e: React.FormEvent) => {
+    e.preventDefault()
+    setSending(true)
+    setTimeout(() => {
+      setSending(false)
+      setSent(true)
+    }, 700)
+  }
+
   return (
     <section className="container-custom section-pad pt-36">
       <Reveal>
@@ -22,23 +36,71 @@ export default function ContactPage(){
         </Reveal>
 
         <Reveal delay={0.2}>
-          <form className="h-full space-y-5 border border-white/[0.06] bg-brand-800/30 p-8">
-            <div>
-              <label className="block text-sm text-cream/90">Name</label>
-              <input className="mt-2 w-full rounded-xl border border-white/10 bg-black/20 px-4 py-3 text-sm text-cream placeholder:text-muted/60 focus:border-gold/50 focus:outline-none focus:ring-2 focus:ring-gold/30 transition" placeholder="Your name" />
-            </div>
-            <div>
-              <label className="block text-sm text-cream/90">Email</label>
-              <input className="mt-2 w-full rounded-xl border border-white/10 bg-black/20 px-4 py-3 text-sm text-cream placeholder:text-muted/60 focus:border-gold/50 focus:outline-none focus:ring-2 focus:ring-gold/30 transition" placeholder="you@email.com" />
-            </div>
-            <div>
-              <label className="block text-sm text-cream/90">Message</label>
-              <textarea rows={4} className="mt-2 w-full resize-none rounded-xl border border-white/10 bg-black/20 px-4 py-3 text-sm text-cream placeholder:text-muted/60 focus:border-gold/50 focus:outline-none focus:ring-2 focus:ring-gold/30 transition" placeholder="How can we help?" />
-            </div>
-            <button className="inline-flex items-center justify-center bg-gold px-6 py-3 text-sm font-medium tracking-wide text-brand-950 transition-all duration-300 hover:-translate-y-0.5 hover:bg-brand-gold-soft">
-              Send Message
-            </button>
-          </form>
+          <div className="h-full border border-white/[0.06] bg-brand-800/30 p-8">
+            {sent ? (
+              <div className="flex h-full flex-col items-center justify-center text-center">
+                <div className="flex h-14 w-14 items-center justify-center rounded-full border border-gold/40 bg-gold/10">
+                  <Check size={24} className="text-gold" strokeWidth={2.5} />
+                </div>
+                <h3 className="mt-5 font-display text-2xl text-cream">Message Sent</h3>
+                <p className="mt-2 max-w-xs text-sm text-muted">
+                  Thank you, {form.name || 'guest'}. We&apos;ll get back to you shortly.
+                </p>
+                <button
+                  onClick={() => { setSent(false); setForm({ name: '', email: '', message: '' }) }}
+                  className="mt-6 text-sm tracking-wide text-cream transition-colors hover:text-gold"
+                >
+                  Send Another
+                </button>
+              </div>
+            ) : (
+              <form onSubmit={submit} className="space-y-5">
+                <div>
+                  <label className="block text-sm text-cream/90">Name</label>
+                  <input
+                    required
+                    value={form.name}
+                    onChange={e => setForm(f => ({ ...f, name: e.target.value }))}
+                    className="mt-2 w-full border border-white/10 bg-black/20 px-4 py-3 text-sm text-cream placeholder:text-muted/60 focus:border-gold/50 focus:outline-none focus:ring-2 focus:ring-gold/30 transition"
+                    placeholder="Your name"
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm text-cream/90">Email</label>
+                  <input
+                    required
+                    type="email"
+                    value={form.email}
+                    onChange={e => setForm(f => ({ ...f, email: e.target.value }))}
+                    className="mt-2 w-full border border-white/10 bg-black/20 px-4 py-3 text-sm text-cream placeholder:text-muted/60 focus:border-gold/50 focus:outline-none focus:ring-2 focus:ring-gold/30 transition"
+                    placeholder="you@email.com"
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm text-cream/90">Message</label>
+                  <textarea
+                    required
+                    rows={4}
+                    value={form.message}
+                    onChange={e => setForm(f => ({ ...f, message: e.target.value }))}
+                    className="mt-2 w-full resize-none border border-white/10 bg-black/20 px-4 py-3 text-sm text-cream placeholder:text-muted/60 focus:border-gold/50 focus:outline-none focus:ring-2 focus:ring-gold/30 transition"
+                    placeholder="How can we help?"
+                  />
+                </div>
+                <button
+                  type="submit"
+                  disabled={sending}
+                  className="group inline-flex items-center justify-center gap-2 bg-gold px-6 py-3 text-sm font-medium tracking-wide text-brand-950 transition-all duration-300 hover:-translate-y-0.5 hover:bg-brand-gold-soft disabled:opacity-60"
+                >
+                  {sending ? (
+                    <><Loader2 size={16} className="animate-spin" /> Sending…</>
+                  ) : (
+                    <>Send Message <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-0.5" /></>
+                  )}
+                </button>
+              </form>
+            )}
+          </div>
         </Reveal>
       </div>
     </section>

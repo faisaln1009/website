@@ -29,8 +29,9 @@ export default function PopularMenu(){
             <div className="eyebrow">Curated Selection</div>
             <h2 className="mt-4 font-display text-4xl md:text-5xl text-cream">Popular Menu</h2>
           </div>
-          <Link href="/menu" className="text-sm tracking-wide text-cream transition-colors hover:text-gold">
-            View Full Menu →
+          <Link href="/menu" className="group inline-flex items-center gap-2 text-sm tracking-wide text-cream transition-colors hover:text-gold">
+            View Full Menu
+            <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
           </Link>
         </div>
       </Reveal>

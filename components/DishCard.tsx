@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 export default function DishCard({ name, desc, price, img }:{ name:string; desc:string; price:string; img:{ src:string; alt:string } }){
   return (
-    <div className="group relative overflow-hidden bg-brand-800/40 border border-white/[0.06] transition-all duration-500 hover:border-gold/25">
+    <div className="group relative overflow-hidden bg-brand-800/40 border border-white/[0.06] transition-all duration-500 hover:border-gold/25 hover:-translate-y-1">
       <div className="relative h-60 overflow-hidden">
         <Image
           src={img.src}
@@ -23,6 +23,7 @@ export default function DishCard({ name, desc, price, img }:{ name:string; desc:
           <span className="text-sm tracking-wide text-gold">{price}</span>
         </div>
       </div>
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-gold/40 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
     </div>
   )
 }

@@ -18,9 +18,12 @@ export default function Testimonials(){
         {reviews.map((r, idx) => (
           <Reveal key={r.name} delay={idx * 0.08}>
             <figure className="h-full border border-white/[0.06] bg-brand-800/30 p-8 transition-colors duration-300 hover:border-gold/20">
-              <span className="font-display text-5xl leading-none text-gold/40">“</span>
-              <blockquote className="mt-2 text-cream/90 leading-relaxed">{r.text}</blockquote>
-              <figcaption className="mt-6 text-sm tracking-wide text-muted">— {r.name}</figcaption>
+              <span className="font-display text-5xl leading-none text-gold/40 select-none">“</span>
+              <blockquote className="mt-3 text-cream/90 leading-relaxed">{r.text}</blockquote>
+              <figcaption className="mt-8 flex items-center gap-3 text-sm tracking-wide text-muted">
+                <span className="h-px w-6 bg-gold/40" />
+                {r.name}
+              </figcaption>
             </figure>
           </Reveal>
         ))}
