@@ -8,7 +8,7 @@ export default function AboutPage(){
     <section className="container-custom section-pad pt-36">
       <Reveal>
         <div className="eyebrow">Our Story</div>
-        <h1 className="mt-4 font-display text-5xl md:text-6xl text-cream">Where craft meets warmth.</h1>
+        <h1 className="mt-4 font-display text-5xl leading-[1.1] text-cream md:text-6xl">Where craft meets warmth.</h1>
       </Reveal>
       <div className="mt-14 grid gap-12 md:grid-cols-2 items-center">
         <Reveal delay={0.1}>

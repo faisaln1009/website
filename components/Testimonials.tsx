@@ -12,7 +12,7 @@ export default function Testimonials(){
     <section className="section-pad">
       <Reveal>
         <div className="eyebrow">Guest Reflections</div>
-        <h2 className="mt-4 font-display text-4xl md:text-5xl text-cream">What Guests Say</h2>
+        <h2 className="mt-4 font-display text-4xl leading-tight text-cream md:text-5xl">What Guests Say</h2>
       </Reveal>
       <div className="mt-12 grid md:grid-cols-3 gap-6">
         {reviews.map((r, idx) => (

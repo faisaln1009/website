@@ -8,8 +8,8 @@ export default function SignatureDishes(){
     <section className="section-pad">
       <Reveal>
         <div className="eyebrow">Chef&apos;s Selection</div>
-        <h2 className="mt-4 font-display text-4xl md:text-5xl text-cream">Signature Dishes</h2>
-        <p className="mt-4 max-w-xl text-muted">Our chef-curated highlights — crafted with seasonal ingredients and refined technique.</p>
+        <h2 className="mt-4 font-display text-4xl leading-tight text-cream md:text-5xl">Signature Dishes</h2>
+        <p className="mt-4 max-w-xl leading-relaxed text-muted">Our chef-curated highlights — crafted with seasonal ingredients and refined technique.</p>
       </Reveal>
       <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {signatureDishes.map((dish, index) => (

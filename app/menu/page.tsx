@@ -29,8 +29,8 @@ export default function MenuPage(){
     <section className="container-custom section-pad pt-36">
       <Reveal>
         <div className="eyebrow">Menu</div>
-        <h1 className="mt-4 font-display text-5xl md:text-6xl text-cream">Our Menu</h1>
-        <p className="mt-4 max-w-xl text-muted">A curated selection of starters, mains, pasta, steaks, and desserts — crafted with seasonal ingredients.</p>
+        <h1 className="mt-4 font-display text-5xl leading-[1.1] text-cream md:text-6xl">Our Menu</h1>
+        <p className="mt-4 max-w-xl leading-relaxed text-muted">A curated selection of starters, mains, pasta, steaks, and desserts — crafted with seasonal ingredients.</p>
       </Reveal>
       <div className="mt-14 grid gap-6 md:grid-cols-2">
         {Object.entries(sections).map(([cat, items], idx) => (

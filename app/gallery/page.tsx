@@ -8,13 +8,13 @@ export default function GalleryPage(){
     <section className="container-custom section-pad pt-36">
       <Reveal>
         <div className="eyebrow">Gallery</div>
-        <h1 className="mt-4 font-display text-5xl md:text-6xl text-cream">A glimpse inside.</h1>
-        <p className="mt-4 max-w-xl text-muted">Moments from our dining room, kitchen, and table.</p>
+        <h1 className="mt-4 font-display text-5xl leading-[1.1] text-cream md:text-6xl">A glimpse inside.</h1>
+        <p className="mt-4 max-w-xl leading-relaxed text-muted">Moments from our dining room, kitchen, and table.</p>
       </Reveal>
-      <div className="mt-14 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+      <div className="mt-14 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4">
         {galleryImages.map((image, index) => (
           <Reveal key={image.src} delay={index * 0.05}>
-            <div className="group relative h-64 md:h-72 overflow-hidden bg-brand-800">
+            <div className="group relative h-64 sm:h-72 md:h-80 overflow-hidden bg-brand-800">
               <Image
                 src={image.src}
                 alt={image.alt}

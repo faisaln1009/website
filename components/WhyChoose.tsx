@@ -13,7 +13,7 @@ export default function WhyChoose(){
     <section className="section-pad">
       <Reveal>
         <div className="eyebrow">Why Neriva</div>
-        <h2 className="mt-4 font-display text-4xl md:text-5xl text-cream">A standard of its own</h2>
+        <h2 className="mt-4 font-display text-4xl leading-tight text-cream md:text-5xl">A standard of its own</h2>
       </Reveal>
       <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-white/[0.06] border border-white/[0.06]">
         {items.map((i, idx) => (

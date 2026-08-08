@@ -27,7 +27,7 @@ export default function PopularMenu(){
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
           <div>
             <div className="eyebrow">Curated Selection</div>
-            <h2 className="mt-4 font-display text-4xl md:text-5xl text-cream">Popular Menu</h2>
+            <h2 className="mt-4 font-display text-4xl leading-tight text-cream md:text-5xl">Popular Menu</h2>
           </div>
           <Link href="/menu" className="group inline-flex items-center gap-2 text-sm tracking-wide text-cream transition-colors hover:text-gold">
             View Full Menu

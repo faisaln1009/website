@@ -21,8 +21,8 @@ export default function ContactPage(){
     <section className="container-custom section-pad pt-36">
       <Reveal>
         <div className="eyebrow">Contact</div>
-        <h1 className="mt-4 font-display text-5xl md:text-6xl text-cream">Get in touch.</h1>
-        <p className="mt-4 max-w-xl text-muted">For reservations and private dining inquiries, we&apos;d love to hear from you.</p>
+        <h1 className="mt-4 font-display text-5xl leading-[1.1] text-cream md:text-6xl">Get in touch.</h1>
+        <p className="mt-4 max-w-xl leading-relaxed text-muted">For reservations and private dining inquiries, we&apos;d love to hear from you.</p>
       </Reveal>
 
       <div className="mt-14 grid gap-6 md:grid-cols-2">

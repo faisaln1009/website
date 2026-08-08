@@ -14,22 +14,23 @@ export default function EventsPage(){
     <section className="container-custom section-pad pt-36">
       <Reveal>
         <div className="eyebrow">Private Dining</div>
-        <h1 className="mt-4 font-display text-5xl md:text-6xl text-cream">Private Dining & Events</h1>
-        <p className="mt-4 max-w-xl text-muted">Host memorable private events — birthdays, corporate dinners, and special celebrations in an intimate setting.</p>
+        <h1 className="mt-4 font-display text-5xl leading-[1.1] text-cream md:text-6xl">Private Dining & Events</h1>
+        <p className="mt-4 max-w-xl leading-relaxed text-muted">Host memorable private events — birthdays, corporate dinners, and special celebrations in an intimate setting.</p>
       </Reveal>
-      <div className="mt-14 grid gap-12 md:grid-cols-2 items-center">
+      <div className="mt-14 grid gap-10 md:grid-cols-2 items-center md:gap-16">
         <Reveal delay={0.1}>
-          <div className="space-y-8">
-            {packages.map(p => (
+          <div className="space-y-6 md:space-y-8">
+            {packages.map((p, i) => (
               <div key={p.title} className="border-l border-white/10 pl-6 transition-colors duration-300 hover:border-gold/40">
-                <h3 className="font-display text-2xl text-cream">{p.title}</h3>
+                <span className="font-display text-sm text-gold/70">0{i + 1}</span>
+                <h3 className="mt-1 font-display text-2xl text-cream">{p.title}</h3>
                 <p className="mt-2 text-muted leading-relaxed">{p.desc}</p>
               </div>
             ))}
           </div>
         </Reveal>
         <Reveal delay={0.2}>
-          <div className="group relative h-80 md:h-[34rem] overflow-hidden">
+          <div className="group relative h-72 md:h-[34rem] overflow-hidden">
             <Image
               src={eventsImage.src}
               alt={eventsImage.alt}

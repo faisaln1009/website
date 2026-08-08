@@ -19,7 +19,7 @@ export default function Hero(){
     : { hidden: { opacity: 0, y: 24 }, visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease } } }
 
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden">
+    <section className="relative min-h-[100svh] flex items-center overflow-hidden">
       <div className="absolute inset-0 -z-10">
         <motion.div
           initial={reduce ? {} : { scale: 1.08 }}
@@ -32,7 +32,7 @@ export default function Hero(){
             alt={heroImage.alt}
             fill
             sizes="100vw"
-            style={{ objectFit: 'cover' }}
+            style={{ objectFit: 'cover', objectPosition: 'center 40%' }}
             priority
           />
         </motion.div>
@@ -40,7 +40,7 @@ export default function Hero(){
         <div className="absolute inset-0 bg-gradient-to-r from-brand-950/70 via-transparent to-transparent" aria-hidden />
       </div>
 
-      <div className="container-custom w-full pt-28 pb-20">
+      <div className="container-custom w-full pt-28 pb-24 md:pb-20">
         <motion.div
           variants={container}
           initial="hidden"
@@ -64,17 +64,17 @@ export default function Hero(){
             Thoughtfully crafted cuisine, warm hospitality, and an atmosphere made for unforgettable evenings.
           </motion.p>
 
-          <motion.div variants={item} className="mt-10 flex flex-col sm:flex-row items-start sm:items-center gap-4">
+          <motion.div variants={item} className="mt-10 flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4">
             <Link
               href="/menu"
-              className="group inline-flex items-center justify-center gap-2 bg-gold px-7 py-3.5 text-sm font-medium tracking-wide text-brand-950 transition-all duration-300 hover:-translate-y-0.5 hover:bg-brand-gold-soft"
+              className="group inline-flex w-full items-center justify-center gap-2 bg-gold px-7 py-3.5 text-sm font-medium tracking-wide text-brand-950 transition-all duration-300 hover:-translate-y-0.5 hover:bg-brand-gold-soft sm:w-auto"
             >
               Explore Menu
               <span className="transition-transform duration-300 group-hover:translate-x-0.5">→</span>
             </Link>
             <Link
               href="/reservations"
-              className="group inline-flex items-center justify-center gap-2 border border-white/20 px-7 py-3.5 text-sm tracking-wide text-cream transition-all duration-300 hover:border-gold/50 hover:bg-white/5"
+              className="group inline-flex w-full items-center justify-center gap-2 border border-white/20 px-7 py-3.5 text-sm tracking-wide text-cream transition-all duration-300 hover:border-gold/50 hover:bg-white/5 sm:w-auto"
             >
               Reserve a Table
               <span className="transition-transform duration-300 group-hover:translate-x-0.5">→</span>

@@ -30,6 +30,15 @@ export default function Navbar(){
     setOpen(false)
   }, [pathname])
 
+  useEffect(() => {
+    if (open) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = ''
+    }
+    return () => { document.body.style.overflow = '' }
+  }, [open])
+
   return (
     <header className="fixed w-full z-50">
       <nav
@@ -68,8 +77,9 @@ export default function Navbar(){
           </div>
 
           <button
-            aria-label="menu"
-            className="md:hidden p-2 text-cream transition-colors hover:text-gold"
+            aria-label={open ? 'Close menu' : 'Open menu'}
+            aria-expanded={open}
+            className="md:hidden p-2.5 -mr-2.5 text-cream transition-colors hover:text-gold"
             onClick={() => setOpen(v => !v)}
           >
             {open ? <X size={22} /> : <Menu size={22} />}

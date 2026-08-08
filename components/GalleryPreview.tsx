@@ -11,7 +11,7 @@ export default function GalleryPreview(){
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
           <div>
             <div className="eyebrow">A Glimpse Inside</div>
-            <h2 className="mt-4 font-display text-4xl md:text-5xl text-cream">Gallery</h2>
+            <h2 className="mt-4 font-display text-4xl leading-tight text-cream md:text-5xl">Gallery</h2>
           </div>
           <Link href="/gallery" className="group inline-flex items-center gap-2 text-sm tracking-wide text-cream transition-colors hover:text-gold">
             View All
@@ -19,7 +19,7 @@ export default function GalleryPreview(){
           </Link>
         </div>
       </Reveal>
-      <div className="mt-12 grid auto-rows-[12rem] md:auto-rows-[14rem] grid-cols-2 md:grid-cols-3 gap-3">
+      <div className="mt-12 grid auto-rows-[10rem] md:auto-rows-[13rem] grid-cols-2 md:grid-cols-3 gap-2.5 sm:gap-3">
         {galleryImages.map((image, index) => (
           <Reveal key={image.src} delay={index * 0.05} className={index === 0 ? 'row-span-2' : ''}>
             <div className="group relative h-full overflow-hidden bg-brand-800">

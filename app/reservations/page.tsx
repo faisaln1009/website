@@ -15,8 +15,8 @@ export default function ReservationsPage(){
       <div className="mx-auto max-w-3xl text-center">
         <Reveal>
           <div className="eyebrow">Reservations</div>
-          <h1 className="mt-4 font-display text-4xl md:text-5xl text-cream">Reserve a Table</h1>
-          <p className="mx-auto mt-4 max-w-xl text-muted">
+          <h1 className="mt-4 font-display text-5xl leading-[1.1] text-cream md:text-6xl">Reserve a Table</h1>
+          <p className="mx-auto mt-4 max-w-xl leading-relaxed text-muted">
             Secure your spot for an unforgettable evening. We accept reservations for parties of up to twenty guests.
           </p>
         </Reveal>
