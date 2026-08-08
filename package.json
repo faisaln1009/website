@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@netlify/plugin-nextjs": "^5.15.13",
     "@supabase/supabase-js": "^2.112.2",
     "framer-motion": "^10.0.0",
     "lucide-react": "^0.269.0",
