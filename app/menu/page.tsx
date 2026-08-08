@@ -1,32 +1,56 @@
 import React from 'react'
 import Reveal from '../../components/Reveal'
 
+type Dish = { name: string; desc: string; price: string }
+const sections: Record<string, Dish[]> = {
+  Starters: [
+    { name: 'Burrata & Heirloom Tomatoes', desc: 'Roasted tomatoes, basil, olive oil', price: 'Tk 550' },
+    { name: 'Crispy Calamari', desc: 'Lemon aioli, fresh herbs', price: 'Tk 480' },
+    { name: 'Beef Tartare', desc: 'Capers, egg yolk, sourdough', price: 'Tk 620' }
+  ],
+  Mains: [
+    { name: 'Pan-Seared Sea Bass', desc: 'Fennel, citrus beurre blanc', price: 'Tk 1250' },
+    { name: 'Duck Confit', desc: 'Herb jus, seasonal vegetables', price: 'Tk 1600' },
+    { name: 'Truffle Tagliatelle', desc: 'Black truffle, aged parmesan', price: 'Tk 950' },
+    { name: 'Prime Ribeye', desc: 'Herb butter, natural jus', price: 'Tk 1800' }
+  ],
+  Desserts: [
+    { name: 'Dark Chocolate Fondant', desc: 'Warm centre, vanilla bean ice cream', price: 'Tk 450' },
+    { name: 'Pistachio Panna Cotta', desc: 'Rose syrup, pistachio crumble', price: 'Tk 420' }
+  ],
+  Drinks: [
+    { name: 'House Red Wine (Glass)', desc: 'Selected by our sommelier', price: 'Tk 350' },
+    { name: 'Espresso Martini', desc: 'House blend, fresh espresso', price: 'Tk 480' }
+  ]
+}
+
 export default function MenuPage(){
   return (
-    <section className="container-custom py-24">
+    <section className="container-custom section-pad pt-36">
       <Reveal>
-        <h1 className="text-4xl font-display">Our Menu</h1>
-        <p className="text-muted mt-3">Explore our curated selection of starters, mains, pasta, seafood, steaks and desserts.</p>
+        <div className="eyebrow">Menu</div>
+        <h1 className="mt-4 font-display text-5xl md:text-6xl text-cream">Our Menu</h1>
+        <p className="mt-4 max-w-xl text-muted">A curated selection of starters, mains, pasta, steaks, and desserts — crafted with seasonal ingredients.</p>
       </Reveal>
-      <div className="mt-8 grid gap-6 md:grid-cols-2">
-        <Reveal delay={0.1}>
-          <div className="p-6 bg-white/5 rounded-3xl transition-transform duration-300 hover:-translate-y-1">
-            <h3 className="font-medium">Starters</h3>
-            <div className="mt-3 space-y-3 text-sm text-muted">
-              <div className="flex justify-between"><div>Burrata & Heirloom Tomatoes</div><div className="text-gold">Tk 550</div></div>
-              <div className="flex justify-between"><div>Crispy Calamari</div><div className="text-gold">Tk 480</div></div>
+      <div className="mt-14 grid gap-6 md:grid-cols-2">
+        {Object.entries(sections).map(([cat, items], idx) => (
+          <Reveal key={cat} delay={idx * 0.06}>
+            <div className="h-full border border-white/[0.06] bg-brand-800/30 p-8 transition-colors duration-300 hover:border-gold/20">
+              <h3 className="font-display text-3xl text-cream">{cat}</h3>
+              <div className="mt-6 space-y-5">
+                {items.map(it => (
+                  <div key={it.name} className="flex justify-between gap-4">
+                    <div>
+                      <div className="font-medium text-cream">{it.name}</div>
+                      <div className="mt-1 text-sm text-muted">{it.desc}</div>
+                    </div>
+                    <div className="shrink-0 text-sm tracking-wide text-gold pt-1">{it.price}</div>
+                  </div>
+                ))}
+              </div>
             </div>
-          </div>
-        </Reveal>
-        <Reveal delay={0.2}>
-          <div className="p-6 bg-white/5 rounded-3xl transition-transform duration-300 hover:-translate-y-1">
-            <h3 className="font-medium">Main Course</h3>
-            <div className="mt-3 space-y-3 text-sm text-muted">
-              <div className="flex justify-between"><div>Pan-Seared Sea Bass</div><div className="text-gold">Tk 1250</div></div>
-              <div className="flex justify-between"><div>Duck Confit</div><div className="text-gold">Tk 1600</div></div>
-            </div>
-          </div>
-        </Reveal>
+          </Reveal>
+        ))}
       </div>
     </section>
   )

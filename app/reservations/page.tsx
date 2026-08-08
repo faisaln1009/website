@@ -11,11 +11,11 @@ const highlights = [
 
 export default function ReservationsPage(){
   return (
-    <section className="container-custom py-24 md:py-32">
+    <section className="container-custom section-pad pt-36">
       <div className="mx-auto max-w-3xl text-center">
         <Reveal>
-          <div className="text-sm text-cream/90 uppercase tracking-widest">Reservations</div>
-          <h1 className="mt-4 text-4xl font-display md:text-5xl">Reserve a Table</h1>
+          <div className="eyebrow">Reservations</div>
+          <h1 className="mt-4 font-display text-4xl md:text-5xl text-cream">Reserve a Table</h1>
           <p className="mx-auto mt-4 max-w-xl text-muted">
             Secure your spot for an unforgettable evening. We accept reservations for parties of up to twenty guests.
           </p>
@@ -25,7 +25,7 @@ export default function ReservationsPage(){
       <Reveal delay={0.1}>
         <div className="mx-auto mt-10 grid max-w-3xl gap-3 sm:grid-cols-3">
           {highlights.map(h => (
-            <div key={h.label} className="flex items-start gap-3 rounded-2xl border border-white/10 bg-white/[0.03] p-4">
+            <div key={h.label} className="flex items-start gap-3 border border-white/[0.08] bg-brand-800/30 p-4">
               <span className="mt-0.5 text-gold">{h.icon}</span>
               <div>
                 <div className="text-xs uppercase tracking-wider text-muted">{h.label}</div>

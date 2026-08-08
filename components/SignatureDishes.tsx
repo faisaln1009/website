@@ -5,14 +5,15 @@ import { signatureDishes } from '../lib/images'
 
 export default function SignatureDishes(){
   return (
-    <section className="mt-12">
+    <section className="section-pad">
       <Reveal>
-        <h2 className="text-3xl font-display">Signature Dishes</h2>
-        <p className="text-muted mt-2">Our chef-curated highlights — crafted with seasonal ingredients and refined technique.</p>
+        <div className="eyebrow">Chef&apos;s Selection</div>
+        <h2 className="mt-4 font-display text-4xl md:text-5xl text-cream">Signature Dishes</h2>
+        <p className="mt-4 max-w-xl text-muted">Our chef-curated highlights — crafted with seasonal ingredients and refined technique.</p>
       </Reveal>
-      <div className="mt-6 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
-        {signatureDishes.map((dish, index)=>(
-          <Reveal key={dish.name} delay={index * 0.05}>
+      <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6">
+        {signatureDishes.map((dish, index) => (
+          <Reveal key={dish.name} delay={index * 0.08}>
             <DishCard name={dish.name} desc={dish.desc} price={dish.price} img={dish.img} />
           </Reveal>
         ))}

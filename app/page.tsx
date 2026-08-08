@@ -12,7 +12,7 @@ export default function Home(){
   return (
     <>
       <Hero />
-      <section className="container-custom mt-16">
+      <section className="container-custom">
         <SignatureDishes />
         <StoryPreview />
         <WhyChoose />

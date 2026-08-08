@@ -1,58 +1,58 @@
 export const heroImage = {
-  src: 'https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg',
-  alt: 'Elegant restaurant dining room with candlelit tables and warm luxury lighting'
+  src: 'https://images.pexels.com/photos/941861/pexels-photo-941861.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+  alt: 'Elegant fine dining restaurant interior with candlelit tables and warm ambient lighting'
 }
 
 export const aboutImage = {
-  src: 'https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg',
-  alt: 'Chef preparing a refined plated dish in a premium kitchen'
+  src: 'https://images.pexels.com/photos/36430088/pexels-photo-36430088.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+  alt: 'Chef garnishing a refined plated dish with precision in a professional kitchen'
 }
 
 export const eventsImage = {
-  src: 'https://images.pexels.com/photos/2335126/pexels-photo-2335126.jpeg',
-  alt: 'Private dining event table with candles and fine service'
+  src: 'https://images.pexels.com/photos/16985188/pexels-photo-16985188.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+  alt: 'Elegant private dining room set for a formal event with refined table settings'
 }
 
 export const storyImage = {
-  src: 'https://images.pexels.com/photos/3756523/pexels-photo-3756523.jpeg',
-  alt: 'Elegant restaurant interior with soft ambient lighting'
+  src: 'https://images.pexels.com/photos/37968303/pexels-photo-37968303.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+  alt: 'Intimate candlelit restaurant table with elegant tableware and warm glow'
 }
 
 export const galleryImages = [
   {
-    src: 'https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg',
-    alt: 'Luxurious dining room with warm candlelight and polished tables'
+    src: 'https://images.pexels.com/photos/15945600/pexels-photo-15945600.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    alt: 'Beautifully set restaurant table with a candlelit centerpiece awaiting guests'
   },
   {
-    src: 'https://images.pexels.com/photos/2335126/pexels-photo-2335126.jpeg',
-    alt: 'Fine seafood dish plated for a premium dining experience'
+    src: 'https://images.pexels.com/photos/33097101/pexels-photo-33097101.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    alt: 'Gourmet dish in an upscale restaurant setting with wine'
   },
   {
-    src: 'https://images.pexels.com/photos/3756523/pexels-photo-3756523.jpeg',
-    alt: 'Stylish restaurant interior with rich textures and lighting'
+    src: 'https://images.pexels.com/photos/31837779/pexels-photo-31837779.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    alt: 'Warmly lit restaurant table set with glassware and plates ready for service'
   },
   {
-    src: 'https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg',
-    alt: 'Chef plating a signature dish in a luxury kitchen'
+    src: 'https://images.pexels.com/photos/36430150/pexels-photo-36430150.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    alt: 'Chef plating a signature dish with focused precision in a professional kitchen'
   },
   {
-    src: 'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg',
-    alt: 'Dark chocolate dessert elegantly plated with delicate garnish'
+    src: 'https://images.pexels.com/photos/8257972/pexels-photo-8257972.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    alt: 'Romantic candlelit dinner setup with wine glasses and floral decor'
   },
   {
-    src: 'https://images.pexels.com/photos/3656807/pexels-photo-3656807.jpeg',
-    alt: 'Intimate dining table set for a refined evening service'
+    src: 'https://images.pexels.com/photos/11851422/pexels-photo-11851422.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    alt: 'Wine bottles and glasses in a dimly lit cellar creating a cozy ambiance'
   }
 ]
 
 export const signatureDishes = [
   {
     name: 'Truffle Tagliatelle',
-    desc: 'Silky pasta tossed with black truffle and parmesan.',
+    desc: 'Silky pasta tossed with black truffle and aged parmesan.',
     price: 'Tk 950',
     img: {
-      src: 'https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg',
-      alt: 'Truffle tagliatelle plated in an elegant restaurant setting'
+      src: 'https://images.pexels.com/photos/7491886/pexels-photo-7491886.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+      alt: 'Truffle tagliatelle with black truffle shavings on a white plate'
     }
   },
   {
@@ -60,17 +60,17 @@ export const signatureDishes = [
     desc: 'Charred exterior, tender flakes, citrus beurre blanc.',
     price: 'Tk 1200',
     img: {
-      src: 'https://images.pexels.com/photos/2335126/pexels-photo-2335126.jpeg',
-      alt: 'Charcoal grilled salmon with citrus beurre blanc'
+      src: 'https://images.pexels.com/photos/16845479/pexels-photo-16845479.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+      alt: 'Charcoal grilled salmon with vibrant vegetables and sauce'
     }
   },
   {
     name: 'Prime Ribeye',
-    desc: 'Slow-seared ribeye with herb butter and jus.',
+    desc: 'Slow-seared ribeye with herb butter and natural jus.',
     price: 'Tk 1800',
     img: {
-      src: 'https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg',
-      alt: 'Prime ribeye steak served with herb butter'
+      src: 'https://images.pexels.com/photos/1639561/pexels-photo-1639561.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+      alt: 'Prime ribeye steak topped with microgreens on a dark plate'
     }
   },
   {
@@ -78,8 +78,8 @@ export const signatureDishes = [
     desc: 'Warm centre, served with vanilla bean ice cream.',
     price: 'Tk 450',
     img: {
-      src: 'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg',
-      alt: 'Dark chocolate fondant with vanilla bean ice cream'
+      src: 'https://images.pexels.com/photos/35022614/pexels-photo-35022614.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+      alt: 'Dark chocolate dessert garnished with an edible flower'
     }
   }
 ]
